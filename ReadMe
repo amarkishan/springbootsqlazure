@@ -1,0 +1,64 @@
+MySQL
+Db Records :
+ create database mydbram99;
+ use mydbram99;
+ 
+ insert into employee values(10,'ram',55000);
+ insert into employee values(20,'Ramesh',65000);
+ insert into employee values(30,'Kumar',95000);
+commit;
+
+#1. Get All Records form Database (Module-1)
+Get :
+http://localhost:9999/employee/getAll
+ {
+        "empId": 10,
+        "empName": "ram",
+        "empSal": 55000
+    },
+    {
+        "empId": 20,
+        "empName": "Ramesh",
+        "empSal": 65000
+    },
+    {
+        "empId": 30,
+        "empName": "Kumar",
+        "empSal": 95000
+    }
+#2. Add Record to Database (Module-2)
+Post : Add records 
+http://localhost:9999/employee/create
+{
+       
+        "empName": "Bhanu",
+        "empSal": 75000
+    }
+
+  #3. Employee Search Record (Module-3) Search By-ID :
+  GET
+  http://localhost:9999/employee/getdetails/1
+   {
+    "empId": 1,
+    "empName": "Bhanu",
+    "empSal": 75000
+}
+ #4. Employee Record Update (Module-4)
+Put : Update Record 
+http://localhost:9999/employee/update
+Select Body : and raw
+{
+    "empId": 1,
+    "empName": "raviram",
+    "empSal": 78000
+}
+#5. Employee Record Deleted  
+
+Delete : delete
+http://localhost:9999/employee/delete/1
+Select Body : and raw
+{
+    "empId": 1,
+    "empName": "raviram",
+    "empSal": 78000
+}
