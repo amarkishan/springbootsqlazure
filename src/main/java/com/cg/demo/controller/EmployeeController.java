@@ -23,7 +23,7 @@ import com.cg.demo.service.EmployeeServiceI;
 
 //Connecting ... to Angular 
 //@CrossOrigin("http://localhost:4200")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("http://localhost:4200")
 public class EmployeeController {
 	
 	@Autowired
